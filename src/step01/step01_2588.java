@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 * (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.
  * */
-public class step01_08 {
+public class step01_2588 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         int a = in.nextInt();
