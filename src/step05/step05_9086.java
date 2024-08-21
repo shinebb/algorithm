@@ -3,9 +3,7 @@ package step05;
 import java.util.Scanner;
 
 /*
-* 첫째 줄에 영어 소문자와 대문자로만 이루어진 단어 S가 주어진다.
-* 둘째 줄에 정수 i가 주어진다.
-* S의 i번째 글자를 출력한다.
+* 문자열을 입력으로 주면 문자열의 첫 글자와 마지막 글자를 출력하는 프로그램을 작성하시오.
 * */
 public class step05_9086 {
     public static void main(String[] args){
