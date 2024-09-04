@@ -10,35 +10,17 @@ import java.util.Scanner;
 public class step06_2941 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
+        String[] alpha = {"c=","c-","dz=","d-","lj","nj","s=","z="};
 
         String word = in.nextLine().trim();
-        String[] alpha = {"c=","c-","dz=","d-","lj","nj","s=","z="};
-        int[] alpha_num = new int[alpha.length];
-        int result = 0;
 
-        for(int i=0; i<word.length(); i++){
-            for(int j=0; j<alpha.length; j++){
-                if(word.substring(i).startsWith(alpha[j])){
-                    if(j!=alpha.length-1) {
-                        alpha_num[j] += 1;
-                    }
-                    if(j==alpha.length-1 && word.charAt(i-1) != 'd') {
-                        alpha_num[j] += 1;
-                    }
-                }
+        for(int i=0; i<alpha.length; i++) {
+            if(word.contains(alpha[i])){
+                word = word.replace(alpha[i], "?");
             }
         }
 
-        for(int i=0; i<alpha_num.length; i++){
-            if(alpha_num[i] > 0){
-                result += alpha_num[i];
-                word = word.replace(alpha[i], "");
-            }
-        }
-
-        if(word.length() > 0) result += word.length();
-
-        System.out.println(result);
+        System.out.println(word.length());
 
     }
 }
